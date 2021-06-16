@@ -1,0 +1,84 @@
+# s
+
+first name: 
+last name:
+email: 
+phone:
+Willing to do FM: Yes|No
+Week of the month: 
+Choose day of the week Option 1: ['Monday'...'Sunday']
+Choose time Option 1
+Choose day of the week Option 2: ['Monday'...'Sunday']
+Choose time Option 2
+Request updates from: ['email', 'WhatsApp']
+
+
+Need authentication.
+
+
+
+DB design
+---------
+
+survey
+
+firstname: 'ABC'
+lastname: 'CDE'
+email: 'xyz@gmail.com'
+phone: 123-12-1235
+fmvolunteer: 'Yes|No'
+option1_dow: {
+		'weekofmonth': 1|2|3|4,
+		'day': 'Mon...Sun', 
+		'time': time,
+		'date': timestamp|date,
+		}
+option2_dow: {
+		'weekofmonth': 1|2|3|4,
+		'day': 'Mon...Sun', 
+		'time': time,
+		'date': timestamp|date,
+		}
+notify: email
+supervisor: Yes|No
+
+
+
+collection 1 - user info
+firstname: 'ABC'
+lastname: 'CDE'
+email: 'xyz@gmail.com'
+phone: 123-12-1235
+fmvolunteer: 'Yes|No'
+
+
+collection 2 - volunteer survey
+	Object ID from user info
+	option1_dow: []
+	option2_dow: []
+
+
+collection 3 - supervisor
+	Object ID from user info
+	# active: Yes|No
+	# date: range(days or months)
+	dayoftheweek: 
+
+
+Separate URL to update supervisor info.
+
+
+collection 5 - monday
+
+collection 6 - tuesday
+
+collection 7 - wednesday
+
+collection 8 - Thursday
+
+collection 9 - friday
+
+collection 10 - saturday
+
+collection 11 - sunday
+

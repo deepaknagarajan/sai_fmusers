@@ -1,0 +1,42 @@
+<!-- <p>fmusers works!</p> -->
+<form>
+    <label for="fname">
+        First name:
+        <input type="text" [(ngModel)]="user.firstname" id="fname" name="fname" value=""><br>
+    </label><br>
+
+    <label for="lname">
+        Last name:
+        <input type="text" [(ngModel)]="user.lastname" id="lname" name="lname" value=""><br>
+    </label><br>
+
+    <label for="email">
+        Email:
+        <input type="email" [(ngModel)]="user.email" id="email" name="email" value=""><br>
+    </label><br>
+
+    <label for="phone">
+        Phone:
+        <input type="phone" [(ngModel)]="user.phone" id="phone" name="phone" value=""><br>
+    </label><br>
+
+
+  <!-- <input type="submit" value="Submit"> -->
+  <button (click)="submitUser()">
+      Submit
+  </button>
+
+</form> 
+
+<p>
+    {{user.firstname}}
+</p>
+<p>
+    {{user.lastname}}
+</p>
+<p>
+    {{user.email}}
+</p>
+<p>
+    {{user.phone}}
+</p>
