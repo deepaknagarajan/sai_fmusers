@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../services/app.service.client';
 
 @Component({
   selector: 'app-fmusers',
@@ -10,15 +11,27 @@ export class FmusersComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private appService: AppService) {
+    
+  }
 
   ngOnInit(): void {
     console.log()
   }
 
   submitUser = () => {
-
+    // let user = {
+      // firstname: this.user.firstname,
+      // lastname: this.user.lastname,
+      // email: this.user.email,
+      // phone: this.user.phone,
+    // };
+    // console.log(user);
+    // this.appService.addUser(user);
     console.log(this.user);
+    this.appService.addUser(this.user).subscribe(res => {
+      console.log(res);
+    });
   }
 
 }

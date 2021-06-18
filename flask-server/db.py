@@ -22,3 +22,13 @@ class Db:
         print(results)
 
         return results[0]
+
+    def add_user(self, user):
+        """
+        """
+        res = {
+            '_id': str(self.fm_users.insert(user)),
+        }
+
+        return res
+
