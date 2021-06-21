@@ -16,13 +16,4 @@ export class AppService {
       return this.httpClient.post(this.url + '/api/addUser', user, httpOptions);
     }
 
-
-
-
-
-    
-
-
-
-
 } 

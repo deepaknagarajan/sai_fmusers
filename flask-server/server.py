@@ -3,7 +3,6 @@
 from flask import Flask, send_from_directory, jsonify
 from flask_cors import CORS, cross_origin
 from flask import request
-import pymongo
 
 from db import Db
 
