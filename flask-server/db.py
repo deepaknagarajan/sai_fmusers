@@ -32,3 +32,13 @@ class Db:
 
         return res
 
+    def show_users(self):
+        """
+        """
+        results = []
+        cur = self.fm_users.find({}, {'_id': 0})
+        for record in cur:
+            results.append(record)
+        
+        return results
+

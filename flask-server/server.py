@@ -33,6 +33,10 @@ def add_users():
         return jsonify(db.add_user(req_data))
 
 
+@app.route('/api/users')
+def show_users():
+    return jsonify(db.show_users())
+
 
 if __name__ == '__main__':
     app.run()

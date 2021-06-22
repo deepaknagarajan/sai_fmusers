@@ -16,4 +16,8 @@ export class AppService {
       return this.httpClient.post(this.url + '/api/addUser', user, httpOptions);
     }
 
+    viewUsers = () => {
+        return fetch(this.url + '/api/users').then(res => res.json());
+    }
+
 } 
